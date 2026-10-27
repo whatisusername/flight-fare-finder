@@ -9,7 +9,7 @@ export function FadeIn({ children, delay = 0, className = "" }: { children: Reac
     if (!el) return;
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setVisible(true);
           io.disconnect();
         }
